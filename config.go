@@ -127,19 +127,19 @@ func loadConfig() (*ConfigFlags, error) {
 		return nil, err
 	}
 
-	if len(activeConfig.Host) == 0 {
-		str := "Please specify a hostname"
-		err := errors.Errorf(str)
-		fmt.Fprintln(os.Stderr, err)
-		return nil, err
-	}
-
-	if len(activeConfig.Nameserver) == 0 {
-		str := "Please specify a nameserver"
-		err := errors.Errorf(str)
-		fmt.Fprintln(os.Stderr, err)
-		return nil, err
-	}
+	//if len(activeConfig.Host) == 0 {
+	//	str := "Please specify a hostname"
+	//	err := errors.Errorf(str)
+	//	fmt.Fprintln(os.Stderr, err)
+	//	return nil, err
+	//}
+	//
+	//if len(activeConfig.Nameserver) == 0 {
+	//	str := "Please specify a nameserver"
+	//	err := errors.Errorf(str)
+	//	fmt.Fprintln(os.Stderr, err)
+	//	return nil, err
+	//}
 
 	activeConfig.Listen = normalizeAddress(activeConfig.Listen, defaultListenPort)
 
